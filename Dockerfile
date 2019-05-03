@@ -11,7 +11,7 @@ ADD .env /app
 EXPOSE ${PORT}
 
 # 5. Agregar package.json
-COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
+ADD package.json /app
 
 # 6. Instalar dependencias
 RUN npm install
