@@ -18,7 +18,6 @@ const Route = use('Route')
 
 
 
-Route.on('/').render('welcome')
 
 
 Route.put('/api/contacts/:id', 'ContactController.update') 

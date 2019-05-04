@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="descarga.ico">
+
+    <title>Banco</title>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
+
+    {{ style('bootstrap.min') }}
+    {{ style('dashboard') }}
+     {{ style('bootstrap-theme.min') }}
+    
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/">BancoPEL</a>
+      
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            
+            
+ 
+        </li>
+      </ul>
+    </nav>
+
+        </nav>
+
+        <main role="main" >
+         <br>
+         <table class="table table-borderless">
+          <thead>
+            <tr>
+              <th scope="col">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="card">
+                  <div class="card-body">
+                    <form action="/api/contacts" method="POST">
+<h1> <center>CuentaHabiente</center></h1>
+         <div class ="form-group">
+            <label>NO. Cuenta </label>
+            <input type ="text" name="cuenta" class="form-control" placeholder="numero de cuenta">
+        </div>
+                    <div class ="form-group">
+            <label>Nombre </label>
+            <input type ="text" name="name" class="form-control" placeholder="nombre del cuenta habiente">
+        </div>
+        
+        <div class ="form-group">
+            <label>Apellido </label>
+            <input type="text" name="title" class="form-control" placeholder="Apellido">
+        </div>
+
+        <div class ="form-group">
+            <label>Correo Electronico </label>
+            <input type ="text" name="email" class="form-control" placeholder="Correo Electronico">
+        </div>
+
+        <div class ="form-group">
+            <label>Telefono </label>
+            <input type ="text" name="tel" class="form-control" placeholder="Telefono">
+        </div>
+        <div class ="form-group">
+            <label>Cantidad de Dinero para aperturar</label>
+            <input type ="text" name="dinero" class="form-control" placeholder="Q">
+        </div>
+
+
+
+       <center> <button class="btn btn-primary" type="submit"> 
+        Agregar</button> </center>
+        </form>
+
+
+                  </div>
+                  </div>
+                </div>
+             
+              </th>
+            </tr>
+          </thead>
+        </table>
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script></script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+    <!-- Graphs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script>
+      var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          datasets: [{
+            data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+            lineTension: 0,
+            backgroundColor: 'transparent',
+            borderColor: '#007bff',
+            borderWidth: 4,
+            pointBackgroundColor: '#007bff'
+          }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: false
+              }
+            }]
+          },
+          legend: {
+            display: false,
+          }
+        }
+      });
+    </script>
+  </body>
+</html> 
