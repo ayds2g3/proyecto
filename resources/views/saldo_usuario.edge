@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Banco | Registro</title>
+        
+        <!-- IMPORTANDO LOS ESTILOS Y JAVASCRIPTS -->
+        {{ style('bootstrap.min') }}
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body style="background-color:lightslategray">
+        <div class="container">
+            <div class="row justify-content-center align-items-center" style="height:100vh">
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <form action="" autocomplete="off">
+                                <h3 style="text-align:center;">Consultar Saldo</h3>
+                                <p>Ingrese el no. de cuenta para verificar saldo</p>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="inputAccount" placeholder="No. de Cuenta">
+                                </div>
+                                <button type="submit" id="buttonSignup" class="btn btn-primary">Consultar saldo</button>
+                                <br />
+                                <br />
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="inputBalance" placeholder="Saldo (Q.)">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="card">
+                        <div class="card-body">
+                            <form action="" autocomplete="off">
+                                <h3 style="text-align:center;">Acreditar a Cuenta</h3>
+                                <p>Ingrese el no. de cuenta para acreditar saldo</p>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="inputAccount" placeholder="No. de Cuenta">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="inputBalance" placeholder="Saldo (Q.)">
+                                </div>
+                                <button type="submit" id="buttonSignup" class="btn btn-primary">Acreditar Saldo</button>
+                            </form>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="card">
+                        <div class="card-body">
+                            <form action="" autocomplete="off">
+                                <h3 style="text-align:center;">Debitar de Cuenta</h3>
+                                <p>Ingrese el no. de cuenta para debitar saldo</p>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="inputAccount" placeholder="No. de Cuenta">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="inputBalance" placeholder="Saldo (Q.)">
+                                </div>
+                              <center>  <button type="submit" id="buttonSignup" class="btn btn-primary">Debitar Saldo</button>
+                              </center>
+                            </form>
+                              <a  href="/eliminar">EliminarCuentahabiente</a>
+                              <a  href="/api/contacts">RegistroCuentahabiente</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

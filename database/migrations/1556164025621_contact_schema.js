@@ -12,9 +12,11 @@ class ContactSchema extends Schema {
       table.string('email')
       table.string('title') 
       table.string('tel') 
+      table.integer('cuenta')
+      table.integer('dinero')
       table.timestamps()
       table.integer('user_id').unsigned().references('id').inTable('users'); 
-    })
+    }) 
   }
 
   down () {

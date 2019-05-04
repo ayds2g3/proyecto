@@ -7,6 +7,7 @@ const Contact = use('App/Models/Contact');
 /** @typedef {import('@adonisjs/framework/src/View')} View */ 
 /** * Resourceful controller for interacting with contacts */ 
 class ContactController { 
+
 /** * Show a list of all contacts. 
 * GET contacts 
 * 
@@ -16,9 +17,11 @@ class ContactController {
 * @param {View} ctx.view 
 */ 
 async index ({ request, response, view }) { 
-  let contacts = await Contact.query().with('user').fetch() 
-  return response.json(contacts)
+  return view.render('registro_usuario')
+  const Contact = await contact.all();
+  contact:contact.toJson()
 }
+
 /** 
 * Render a form to be used for creating a new contact. 
 * GET contacts/create 
@@ -40,19 +43,21 @@ async create ({ request, response, view }) {
 * @param {Response} ctx.response 
 */ 
 
+
 async store ({ request, response }) { 
-  const name = request.input('name') 
-  const email = request.input('email') 
-  const title = request.input('title') 
-  const tel = request.input('tel') 
-  const contact = new Contact() 
-  contact.name = name 
-  contact.email = email 
-  contact.title = title 
-  contact.tel = tel 
+ 
+  const contact = new Contact() ;
+  contact.name = request.input('name') 
+  contact.email =  request.input('email')  
+  contact.title = request.input('title')  
+  contact.tel = request.input('tel')  
+  contact.cuenta = request.input('cuenta')
+  contact.dinero = request.input('dinero')
+
   await 
       contact.save() 
-  return response.json(contact) 
+      
+  return response.redirect('/api/contacts')
 } 
 /** 
 * Display a single contact. 
@@ -87,14 +92,18 @@ async update ({ params, request, response }) {
   const email = request.input('email') 
   const title = request.input('title') 
   const tel = request.input('tel') 
+  const cuenta = resquest.input('cuenta')
+  const dinero = request.input('dinero')
   let contact = await Contact.find(params.id) 
   contact.name = name 
   contact.email = email 
   contact.title = title 
   contact.tel = tel 
+  contact.cuenta = cuenta
+  contact.dinero = dinero
   await 
   contact.save() 
-  return response.json(contact)
+  return response.redirect('/api/contacts')
 
 } 
 /** 
