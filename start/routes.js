@@ -18,7 +18,9 @@ const Route = use('Route')
 
 
 
-Route.on('/').render('welcome')
+Route.on('/').render('registro_usuario')
+Route.get('/registro', 'RegistroController.signuppage')
+Route.get('/eliminar', 'RegistroController.deletepage')
 
 
 Route.put('/api/contacts/:id', 'ContactController.update') 
