@@ -45,11 +45,15 @@ async store ({ request, response }) {
   const email = request.input('email') 
   const title = request.input('title') 
   const tel = request.input('tel') 
+  const cuenta = request.input('cuenta')
+  const dinero = request.input('dinero')
   const contact = new Contact() 
   contact.name = name 
   contact.email = email 
   contact.title = title 
   contact.tel = tel 
+  contact.cuenta = cuenta
+  contact.dinero = dinero
   await 
       contact.save() 
   return response.json(contact) 
@@ -87,11 +91,15 @@ async update ({ params, request, response }) {
   const email = request.input('email') 
   const title = request.input('title') 
   const tel = request.input('tel') 
+  const cuenta = resquest.input('cuenta')
+  const dinero = request.input('dinero')
   let contact = await Contact.find(params.id) 
   contact.name = name 
   contact.email = email 
   contact.title = title 
   contact.tel = tel 
+  contact.cuenta = cuenta
+  contact.dinero = dinero
   await 
   contact.save() 
   return response.json(contact)
