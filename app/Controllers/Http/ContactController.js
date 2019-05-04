@@ -17,7 +17,7 @@ class ContactController {
 * @param {View} ctx.view 
 */ 
 async index ({ request, response, view }) { 
-  return view.render('habiente')
+  return view.render('registro_usuario')
   const Contact = await contact.all();
   contact:contact.toJson()
 }
