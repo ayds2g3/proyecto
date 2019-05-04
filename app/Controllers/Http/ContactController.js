@@ -57,7 +57,7 @@ async store ({ request, response }) {
   await 
       contact.save() 
       
-  return response.json(contact) 
+  return response.redirect('/api/contacts')
 } 
 /** 
 * Display a single contact. 
